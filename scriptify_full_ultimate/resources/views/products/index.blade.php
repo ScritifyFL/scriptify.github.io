@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<h1 class='text-2xl font-bold mb-4'>Scripts Disponibles</h1><div>@foreach($products as $p)<div class='bg-white p-4 mb-2 rounded shadow'><a href='/product/{{$p->id}}' class='text-blue-600 font-semibold'>{{$p->title}}</a> - €{{number_format($p->price_cents / 100, 2)}}</div>@endforeach</div>@endsection

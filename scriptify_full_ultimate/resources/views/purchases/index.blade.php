@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<h1 class='text-2xl font-bold'>Mis Compras</h1><ul>@foreach($downloads as $d)<li><a href='{{$d->product->file_path}}' class='text-blue-500'>{{$d->product->title}}</a></li>@endforeach</ul>@endsection

@@ -1,0 +1,2 @@
+@extends('layouts.app')
+@section('content')<h1 class='text-xl font-bold'>{{$product->title}}</h1><p>{{$product->description}}</p><form action='/pay/{{$product->id}}' method='POST'>@csrf<button class='bg-green-600 text-white px-4 py-2 rounded mt-4'>Pagar €{{number_format($product->price_cents / 100, 2)}}</button></form>@endsection
