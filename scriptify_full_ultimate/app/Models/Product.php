@@ -1,1 +1,0 @@
-<?php namespace App\Models; use Illuminate\Database\Eloquent\Model; class Product extends Model { protected $fillable = ['title','description','price_cents','file_path']; public function downloads() { return $this->hasMany(\App\Models\Download::class); }}
